@@ -1,0 +1,663 @@
+Command line
+
+
+Last login: Wed May  1 09:47:36 on ttys000
+You have mail.
+dajias-MacBook-Pro:~ dajia$ ========= πρώτη οθόνη command line
+
+
+dajias-MacBook-Pro:~ dajia$ echo hello========= του λέω να κάνει echo το hello 
+hello========= κάνει echo το hello
+
+
+dajias-MacBook-Pro:~ dajia$ ruby -v ========== ρωτάω να μου πει αν εχει εγκατεστημενη την ruby και ποιά έκδοση
+ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-darwin10.8.0] ============ μου απαντα οτι ναι εχω εγκατεστημένη την ruby και μου λέει και ποιά εκδιση αυτής έχω.
+
+To Prompt είναι αυτό που ακολουθεί αμέσως μετά την : και είναι ο directory στον οποίο βρίσκομαι
+ 
+dajias-MacBook-Pro:~ dajia$ ======== το ~ μου λέει οτι βρίσκομαι στον root/default φάκελο directory, στον home directory.
+
+
+dajias-MacBook-Pro:~ dajia$ cd Development/ ============ με το cd -> changr directory τοθ λέω οτι θέλω να αλλαξω-μετακινηθω σε κάποιο directory, μετλα το cd γράφω το όνομα του directory που θέλω να πάω 
+
+dajias-MacBook-Pro:Development dajia$ =========== έχει αλλάξει directory
+
+dajias-MacBook-Pro:Development dajia$ cd ../ ============ γυρίζω ένα επίπεδο πιο πάνω με το ../, αν θέλω δυοή τρία απλά βάζω τόσα ../ => cd ../../../ θα γυρίσει τρια επίπεδα πιο πάνω απο εκεί που είμαι
+
+Πληκτρολογόντας απλά cd, όπου κι αν βρίσκομαι, θα γυρίσει στο root directory ~ ===> dajias-MacBook-Pro:~ dajia$ 
+
+
+ΕΝΤΟΛΕΣ
+
+puts ===>>>>>> γράφοντας σε ενα file του text editor την εντολή puts και κάτι ακόμα, τότε απλά η εντολή αυτή θα "γράψει" αυτό που ακολουθεί την εντολή. 
+
+NUMBERS
+
+
+Αν έχω γράψει σε ενα 
+puts 2+1 και επειτα καλέσω αυτό το rb εγγραφο στο command line (δηλααδη λεω στον υπολογιστη να τρεξει/εκτελέσει αυτο το εγγραφο) γραφοντας ruby ονομα εγγραφου.rb τότε αμέσως ο υπολογιστης στο command line θα εμφανίσει 3
+
+dajias-MacBook-Pro:ruby_pro dajia$ ruby calc.rb =====> λέω στον υπολογιστη να τρεξει αυτο το έγγραφο
+
+
+3 =====> εκτελει την εντολη puts, δηλαδή γράφει ότι ακολουθεί μετά τοην εντολη puts
+
+
+Integer =====>>>>>> ακέραιοι αριθμοί, χωρίς υποδιαστολή
+
+Floating - point numbers or floats ========>>>>> δεκαδικοί αριθμοί.
+
+H ruby αναγνωρίζει τα βασικά σύμβολατων μαθηματικών 
+puts 1.0 + 2.0 === το + για προσθεση
+puts 2.0 * 3.0 === το * (shift 8) για πολλαπλασιασμό
+puts 5.0 - 8.0 === το - για αφάιρεση
+puts 9.0 / 2.0 === τ0 / για διαίρεση
+
+Για τα δεκαδικά χρησιμοποιούμε πάντα το σύμβολο της τελείας ( . )ΠΟΤΕ το κόμμα ( , )
+
+Τα παραπάνω θα επιστρέψουν αποτελέσματα με δεκαδικά
+
+3.0
+6.0
+-3.0
+4.5
+
+αν είχα puts 9/2 ΄τοτε στο command line θα επέστρεφε 4 (αν δεν εχω δεκαδικα δεν μου επιστρεφει δεκαδικα, ΠΑΝΤΑ στρογγυλοποιεί προς τα κάτω)
+
+Μπορούμε να συνδιασουμε μαθηματικες πραξεις χρησιμοποιόντας παρενθεσεις 
+
+
+
+puts (1.0 + 6,9) * (9-3)
+
+
+LETTERS
+
+η ruby φυσικά αναγνωρίζει και γράμματα/λέξεις αλλά και σύμβολα. Για να αναφερθούμε σε μια ομάδα γραμματων (δηλαδη, λέξη ή λέξεις) το ονομάζουμε string
+
+'Dajia'
+'Dajia is so cooool!!!!!!!!!!!'
+'' ==> empty string
+
+η εντολη puts φυσικά λειτουργει και με τα strings
+
+puts 'Dajia is so cooool!!!!!' =====>>>>>> θα δώσει Dajia is so cooool!!!!!
+puts '' # =====>>>>>> θα αφήσει μια κενή γραμμη
+puts 'Its a very boring day....' =====>>>>>> θα δώσει Its a very boring day....
+
+
+Τα συμβολα των μαθηματικών ισχύυν και για τα strings. Δηλαδη μπορούμε να συνδιάσουμε strings ή να πολλαπλασιάσουμε strings. 
+
+puts 'Its a very' + 'boring day....' =====>>>>>> θα δώσει Its a veryboring day.... ΠΡΟΣΟΧΗ ΣΤΑ ΚΕΝΑ!!!!
+puts 'Its a very ' + 'boring day....' =====>>>>>> θα δώσει Its a very boring day....
+puts 'Its a very' + ' boring day....' =====>>>>>> θα δώσει Its a very boring day....
+ 
+puts 'Its a very boring day....' *4 =====>>>>>> θα δώσει Its a very boring day....Its a very boring day....Its a very boring day....Its a very boring day....ΠΡΟΣΟΧΗ ΣΤΑ ΚΕΝΑ!!!!
+puts 'Its a very boring day.... ' *4 =====>>>>>> θα δώσει Its a very boring day.... Its a very boring day.... Its a very boring day.... Its a very boring day....
+
+NUMBRES VS DIGITS
+
+puts 12 => 12 is a number
+puts '12' => '12' is a sting that has digits in it
+
+puts 12 + 12 => 24
+puts '12' + '12' => 1212
+puts '12 + 12'=> 12 + 12
+
+
+puts 'You're swell!' => θα βγάλει erro γιατι την αποστροφο την καταλαβαινει ως τελος του string και γιατι κατι ακολουθει το οποιο δεν αναγνωριζει 
+puts 'You\'re swell!' => χρησιμοποιούμε το escape \ για να καταλάβει την απόστροφο
+
+To escaping το χρησιμοποιούμε μόνο για την απόστροφο αλλα και για τον χαρακτηρα backslash / 
+
+puts 'up\\down'
+
+
+
+VARIABLES AND ASSIGNMENT
+
+για να αποθηκευσουμε ενα string στην μνημη του υπολογιστή μας θα πρέπει να δώσουμε ένα όνομα σ'αυτο το string. Η διαδικασία αυτή ονομάζεται assignment. Tο όνομα που 
+δίνουμε στο string ονομαζεται variable.
+To variable μπορεί να είναι οτιδηποτε, αρκει ο πρώτος χαρακτήρας του να ειναι μικρό/πεζο γραμμα.
+
+my_string = '...you can say that again...' 
+
+puts my_string => θα δώσει ...you can say that again...
+
+Αφου ονοματισουμε (assignment) ενα variable, μπορουμε να του πούμε να δείνχει σε μια άλλη value, δηλαδή μπορούμε να ξανακάνουμε assignment στο ιδιο variable αλλά σε άλλη τιμή
+
+artist = 'Mozart'
+
+puts artist + ' is my favorite!' => θα δώσει Mozart is my favorite!
+
+artist = 'Beethoven'
+
+puts 'I hate '+ artist => θα δώσει I hate Beethoven 
+
+my_own_var = 'just another ' + 'string' 
+puts my_own_var => θα δώσει just another string
+my_own_var = 5 * (1+2) 
+puts my_own_var θα δώσει 15
+
+Ένα variable μπορεί να δείχνει με οτιδηποτε εκτος απο ενα άλλο variable
+
+δηλαδη αν εχω 
+var1 = 8
+και 
+var1 = var2
+αυτο θα σημαίνει οτι τελικα var2 = 8
+αν πω var1 = 'eight'
+και μετα τα καλέσω
+puts var1
+puts var2 
+θα πάρω αντίστοιχα 
+eight
+8
+  ΔΕΝ ΜΠΟΡΟΥΜΕ ΝΑ ΣΥΝΔΙΑΣΟΥΜΕ STRINGS ΚΑΙ ΑΡΙΘΜΟΥΣ ΜΑΖΙ
+  
+  Conversions -Μετατροπές
+  
+  
+  Μπορούμε να μετατρέψουμε ενα string σε αριθμο (ακέραιο ή δεκαδικό) και εναν αριθμο σε string 
+  
+  var1= 2 => integer
+  var2 = '5' => string
+  puts var1 + var2 => θα βγάλει error
+  
+  μποούμε είτε να μετατρέψουμε το var1 σε string (αρα το αποτέλεσμα θα είναι 25)
+  είτε να μετατρέψουμε το var2 σε αριθμο (αρα το αποτελεσμα θα ειναι 7)
+  
+  Οι εντολές μετατροπής ειναι 
+  .to_s => μετατροπή σε string (sting)
+  .to_i => μετατροπή σε ακέραιο (integer)
+  .to_f => μετατροπή σε δεκαδικο (float)
+  
+  var1= 2 
+  var2 = '5' 
+  puts var1.to_s + var2 => 25
+e
+  puts var1 + var2.to_i  => 7
+  
+  puts '15'.to_f => θα δώσει 15.0
+  puts '99.999'.to_f => θα δώσει 99.999
+  puts '99.999'.to_i => θα δώσει 99
+  puts '' => θα δώσει κεν'η γραμμή
+  puts '5 is my favorite number!'.to_i => θα δώσει 5, τα υπόλοιπα δεν τα αναγνωρίζει ως αριθμούς 
+  puts 'Who asked you about 5 or whatever?'.to_i => θα δώσει 0, δεν αναγνωρίζει τίποτα ως αριθμό
+  puts 'Your momma did.'.to_f => => θα δώσει 0.0, δεν αναγνωρίζει τίποτα ως αριθμό
+  puts '' => θα δώσει κεν'η γραμμή
+  puts 'stringy'.to_s => θα δώσει sτringy
+  puts 3.to_i => θα δώσει 3
+puts =>  σημαίνει put string το s σημαίνει string
+
+
+gets => φερνει- ανακαλεί
+
+puts 'Hello there, and what\'s your name?' => όταν τρέξω το έγγραφο ruby θα σταματήσει σε αυτή την γραμμη και θα περιμένει να πληκτρολογίσω κάτι, 
+                                              για να συνεχίσει να εμφανίσει και τα υπόλοιπα.  
+
+name = gets => πληκτρολογώ κάτι και εμφαμίζοναται και τ αεπόμενα
+
+puts 'Your name is ' + name + '? What a lovely name!' 
+
+puts 'Pleased to meet you, ' + name + '. :)'
+
+δηλαδη θα εμφανιστει συνολικα 
+
+Hello there, and what's your name?
+dajia
+Your name is dajia
+? What a lovely name!
+Pleased to meet you, dajia
+. :)
+ Το gets μπαίνει σε εφαρμογή αφού γράψω κατι και επειτα πατησω enter. Βεβαια βάζει enter αμεσως μετα το variable που εχει γινει assign με το enter
+ καθε φορα που αυτο εμφανιζεται. Δηλαδη το gets προσέτει ένα enter μετα απο κάθε εκτελεση/εμφανιση αυτου που πληκτρολογήσαμε.
+ To gets φέρνει οτι εχω πληκτρολογήσει και το enter μαζi και αυτο το κάνει κάθε φορά που εμεις καλουμε το variable το οποιο είναι assign με το gets.
+ 
+ CHOMP MTEHOD     (δεν λαμβάνει υπόψιν του τα Enter)
+ 
+ Για να μην γινετα αυτό, χρησιμοποιούμε την .chomp method
+ 
+ 
+ puts 'Hello there, and what\'s your name?' => όταν τρέξω το έγγραφο ruby θα σταματήσει σε αυτή την γραμμη και θα περιμένει να πληκτρολογίσω κάτι, 
+                                               για να συνεχίσει να εμφανίσει και τα υπόλοιπα.  
+
+ name = gets.chomp => πληκτρολογώ κάτι και εμφαμίζοναται και τ αεπόμενα
+
+ puts 'Your name is ' + name + '? What a lovely name!' 
+
+ puts 'Pleased to meet you, ' + name + '. :)' 
+ 
+ 
+ δηλαδη θα εμφανιστει συνολικα 
+
+ Hello there, and what's your name?
+ dajia
+ Your name is dajia? What a lovely name!
+ Pleased to meet you, dajia. :)
+ 
+ 
+ REVERSE METHOD
+ 
+ χρησιμοποιούμε το .reverse για να εχουμε μια αναποδη εκδοχη του string μας
+ 
+ name = 'dajia'
+ puts name.reverse => θα δώσει aijad
+ 
+ αν ξαναπω puts name τοτε θα δώσει dajia
+ Το reverse δινει μια αναποδη εκδοχη, δεν δημιουργει καινουργιο string
+ 
+ LENGHT METHOD
+ Μας δινει το αριθμό των χαρακτήρων ενος string μαζι με τα κενα
+ 
+ puts 'What is your full name?' 
+ name = gets.chomp 
+ puts 'Did you know there are ' + name.length.to_s + ' characters' 
+ puts 'in your name, ' + name + '?'
+ 
+ θα δώσει την string version του αριθμου των χαρακτηρων του string, δεν θα επιστρεψει αριθμο, αλλα string (name.length.to_s)
+ 
+ 
+ *CASE
+ 
+ .upcase => τα κανει κεφαλαια, δεν αλλαζει το string, αλλα την εκδοχη του 
+ .downcase => τα κανει πεζα/μικρα, αλλα την εκδοχη του 
+ .swapcase => κανει τα μικρα κεφαλαια και τα κεφαλαια μικρα το άνει σε καθε γραμμα του string, αλλα την εκδοχη του 
+ .capitalize => κάνει τα κεφαλαία πεζά/μικρά, με κεφαλαιο τον πρώτο χαρακτήρα, οχι το πρώτο γραμμα πχ dajia = ' b' (εχω κενο πριν το γραμμα)=> puts dajia.capitalize =>  b
+                , αλλα την εκδοχη του 
+                
+
+dajia = 'MacDajiA'
+
+puts dajia.upcase => MACDAJIA
+puts dajia.downcase => macdajia
+puts dajia.swapcase => mACdAJIa
+puts dajia.capitalize => Macdajia
+puts dajia => MacDajiA               
+
+FIXNUM  & BIGNUM => INTEGERS
+
+
+CENTER => προσθέτει κενα πριν και μετα απο το string center (......)
+
+line_width = 50
+puts('And scared her poor shoe dog away.'.center(line_width))
+                
+ 
+LJUST - LEFT JUSTIFY => προσθέτει κενα μετα απο το string ljust (......)
+line_width = 40
+str = '--> text <--' 
+puts(str.ljust( line_width)) 
+
+RJUST - RIGHT JUSTIFY => προσθέτει κενα πριν απο το string rjust (......)
+line_width = 40 
+puts(str.rjust( line_width))
+
+
+
+ΔΥΝΑΜΕΙΣ => Οι δυναμεις στην ruby γράφονται με δυο αστερισκους **
+αν θελουμε να πουμε 5 στο τετράγωνο γραφουμε 
+puts 5**2
+
+
+
+RAND 
+puts rand => δίνει τυχαίο αριθμό μεταξύ 0.0 και 1.0, ο οποίος θα είναι μεγαλύτερος ή ισος απο το 0.0 και μικρότερος απο το 1.0
+
+
+το rand (1) παντα δίνει 0.
+
+Αν ορισουμε αριθμό τότε θα δώσει τυχαιο αριθμό ο οποίος θα είναι μεγαλύτερος ή ίσος απο το 0 και μικρότερος απο τον αριθμό που έχουμε ορίσει
+
+puts (rand (999)) => 247
+
+puts (rand(101).to_s + '% chance of rain,') => 67% change to rain
+
+Η ruby για το random μετραει και το 0 και μαλιστα ως πρωτο αριθμο
+
+SRAND
+
+το seed rand μας δίνει την δυνατότητα να εμφανίζουμε τους ιδιους τυχαίους αριθμούς 
+
+οριζουμε το srand απλα βάζοντας εναν αριθμο δίπλα του χωρισμένα με ενα κενο
+
+srand 1980
+και επειτα ζηταμε απο την ruby να μας δώσει τυχαίους αριθμούς
+puts (rand(30))
+puts (rand(30))
+
+
+Comparison Methods - Μέθοδοι Σύγκρισης
+
+> μεγαλύτερο απο
+< μικρότερο απο
+
+>= μεγαλύερο ή ισο 
+<= μικρότερο ή ιδιο
+
+== ισο/ισάξιο
+
+!= διάφορο/οχι ίσο
+
+Δίνουν ως αποτελεσμα true ή false (τα true και false δεν είναι strings ειναι special objecta τα οποία παρουσιάζονατι ως strings (απο το puts=> put string))
+
+λειτουργουν και με αριθμούς και με λέξεις.
+
+Υπάρχει όμως στην ruby η λεξικγραφική σειρά. Δηλαδή υπάρχει η αλφαβητική σειρά (c πιο πριν απο το d) και τα κεφαλία είναι σε σειρά πιο μπροστά απο τα πεζα
+
+δηλαδή το Xander είναι πιο μπροστά απο το cat. Επίσης μπορούμε να τα κάνουε πεζά ή κεφαλαία προσθέτοντας και στα δυο την αντίστοιχη method
+
+puts 'cat' < 'Xander; => false
+puts 'cat'.downcase < 'Xander;.downcase => true
+
+
+το ιδιο ισχύει και με τα strings  τα οποία αποτελούνται απο αριθμούς.
+
+puts 2 < 10 => true
+puts '2' < '10' => false ο χαρακτήρας 2 είναι σε σειρα μετά απο τον χαρακτηρα 1. το 0 δίπλα στο 1 δεν κάνει τον χαρακτηρα 1 πιο μεγάλο.
+
+ 
+
+
+Branching - Διακλαδώσεις if, else, else, end.
+
+Εαν οτιδηποτε υπάρχει μετα το if είναι true δηλαδη είναι μια συνθήκη που ιχσύει πάντα, τρεχουμε τον κώδικα μεταξύ των if και end
+
+Εαν οτιδηποτε υπάρχει μετα το if είναι δεν είναι μια συνθήκη που ιχσύει πάντα είναι δηλαδη false, τότε ο κλωδικας μεταξύ των if και end δεν θα εκτελεστεί
+
+
+puts 'Hello, what is your name?'
+
+name = gets.chomp
+
+puts 'What a lovely name!!!'
+
+if name == 'John'
+  puts 'AAAAAA! YOUR ARE JOHN HUH!'
+end 
+  
+
+Εκτος απο το if χρησιμοποιούμε κια το else στις περιπτώσεις στις οποίες μόνο σε συγκεκριμένη περιτπτωση θελουμε να ισχυει κάτι συγκεκριμένο, 
+διαφορετικα, σε όλες τις άλλες περιπτωσεις θέλουμε να ισχυει κατι αλλο
+
+
+puts 'how old are you?'
+
+age = gets.chomp
+
+if age == 17
+  
+  puts 'your are not that old!'
+  
+else 
+  
+  puts 'You are very old'  
+
+end
+
+Looping - Επανάληψη
+
+
+όταν θέλουμε το πρόγραμμα να κάνει το ίδιο πράγμα ξανά και ξανά χρησιμοποιούμε το while. Πρέπει όμως να ορίζουμε και πότε αυτή η κατάσταση θα σταματάει. 
+Τότε χρησιμοποιούμε το end.
+
+input = '' while input != 'bye'
+puts input
+input = gets.chomp
+end
+puts 'Come again soon!' => δεν σταματαει η λουπα, συνεχιζεται 
+
+========================= Για να σταματησουμε απο command line μια λούπα, χρησιμοποιούμε τα control + C ==================
+
+το while τεστάρει την κατάσταση απο την αρχή της λούπας
+
+για να συνεχίζεται να εκτελειτε η λουπα, αρκει η condition να είναι true. Στο πάνω παραδειγμα εαν ο χρηστης δεν γραψει ποτε bye τότε η λουπα θα συνεχίζεται για πάντα
+
+Εαν θέλουμε να σταμτησουμε την λούπα το κάνουμε αυτο με το break, δηλαδη διακόπτουμε την λούπα
+
+
+while 'Spike' > 'Angel' => πιο γενικα για να ορισουμε οτι μια κατασταση θα ισχυει γράφουμε while true
+input = gets.chomp
+ puts input 
+ if input == 'bye'
+ break 
+ end
+end
+puts 'Come again soon!' => σταματαει η λούπα
+
+
+μπορουμε να χρησιμοποιούμε λουπες μέσα σε λούπες 
+
+puts 'Hello, what\'s your name?' 
+name = gets.chomp 
+puts 'Hello, ' + name + '.'
+if name == 'Chris' 
+  puts 'What a lovely name!'
+else 
+  if name == 'Katy'
+    puts 'What a lovely name!' 
+    end
+end
+
+αντι για τα παραπάνω για να εχουμε πιο λίγο κωδικα μπορούμε να χρησιμοποιήσουμε το elseif
+
+puts 'Hello, what\'s your name?' 
+name = gets.chomp 
+puts 'Hello, ' + name + '.'
+if	name == 'Chris' 
+  puts 'What a lovely name!'
+elsif name == 'Katy' 
+  puts 'What a lovely name!'
+end
+
+και στις δυο παραπάνω περιπτωσεις ομως επαναλαμβανόμαστε,δηλαδη έχουμε δυο φορες το puts 'What a lovely name!' . 
+Για να μην επαναλαμβανόμαστε το || (one or another or both)
+ 
+ο παραπάνω κώδικας θα γίνει 
+puts 'Hello, what\'s your name?' 
+name = gets.chomp 
+puts 'Hello, ' + name + '.'
+if name == 'Chris' || name == 'Katy' 
+  puts 'What a lovely name!'
+end 
+
+Εκτος απο το || υπάρχουν και άλλοι δυοlogical operators, οι && και !
+
+
+|| => one or the other, or both.
+
+&& => and 
+
+! => not
+
+
+ARRAYS 
+
+Ένα array είναι ουσιαστικά μια λίστα. Κάθε υποδοχή της λίστας αυτής λειτουργεί όπως ενα απο variable : 
+Δηλαδη μπορούμε να δουμε κάθε υποδοχη σε ποιο object δειχνει και φυσικα μπορούμε να πούμε σε κάθε υποδοχή να δείχνει σε κάποιο διαφορετικό object.
+ 
+για να ορισουμε μια array της δίνουμε ενα όνομα, έπειτα βάζουμε το συμβολο της εξισωσης και στην συνέχεια ακολουθεί η ανοιχτη και η κλειστη αγκυλη. 
+Οτιδήποτε βρισκεται μέσα στις αγκυλες είναι variable που έχε συγκεκριμενη θεση-υποδοχη μεσα στην array.
+
+dajia = [ ] => κενο array
+dajia =[ 1.24, miaou, [ true, false ] ] => array που έχει μέσα του έναν float, ενα string και μια array, η οποία αποτελείται απο τα true και false
+dajia = [ day, night ]  => array που αποτελείται απο δυ strings
+
+Κάθε υποδοχή σε μια array έχει και τον δικό της αριθμό ευρετηρίου- αριθμό υποδοχης, ετσι ώστε να μπορούμε να αναφερόμαστε στην συγκεκριμένη υποδοχη. 
+Οι αριθμοί των υποδοχών ξεκιναν απο το μηδεν 0 και οχι απο το 1 ως ειθηστε.
+
+dajia =[ yannis, evi, dimitris ]
+
+puts dajia => θα δωσει:
+         yannis
+         evi 
+         dimitris
+         
+δηλαδη θα εμφανίσει όλα τα περιεχόμενα της array με την σειρα που έχουν τοποθετηθεί μεσα σ'αυτην.
+
+puts dajia [ 1 ] => δειχνει στο δευτερο όνομα μεσα στην array, αρα θα δώσει evi
+puts dajia [ 0 ] => δειχνει στο πρωτο όνομα μεσα στην array, αρα θα δώσει yannis
+puts dajia [ 2 ] => δειχνει στο τριτο όνομα μεσα στην array, αρα θα δώσει dimitris
+puts dajia [ 3 ] => δειχνει στο τεταρτο όνομα μεσα στην array, αρα θα δώσει nil => το nil ειναι ενα special object το οποίο είναι 
+              ο τρόπος της ruby να μας πει "δεν υπάρχει άλλο object" 
+
+
+μπορουμε να πουμε σε οποιαδηποτε υποδοχη να δειχνει σε κατι άλλο, απο αυτο που δειχνει μεσα στην array
+πχ
+dajia [ 1 ] = "xaris"
+
+
+H Each Method
+
+Η μέθοδος each μας απιτρέπει να κάνουμε κατι που θέλουμε σε κάθε αντικειμενο της array
+
+παραδειγμα 
+languages = ['English', 'Norwegian', 'Ruby']
+
+languages.each do |lang| 
+  puts 'I love ' + lang + '!' 
+  puts 'Don\'t you?'
+end
+  puts 'And let\'s hear it for Java!' 
+  puts '<crickets chirp in the distance>'
+
+
+Με το each μπορουμε να έχουμε πρόσβαση, να αναφερομαστε σε κάθε object μεσα στην array, χωρις να χρειάζεται να χρησιμοποιούμε αριθμους.
+
+Το  do σημαίνει οτι μετά απο αυτο, κάνε ότι σου πω.
+
+Με τα do και end ορίζουμε ενα block κωδικα ο οποίος σε αυτην την περιπτωση στελνεται στην each method.
+Δηλαδη λέμε στην ruby "Θέλω να κάνεις αυτο για κάθε object στην array"
+
+
+Το παραπάνω θα δώσει 
+
+I love English!
+Don't you?
+I love Norwegian!
+Don't you?
+I love Ruby!
+Don't you?
+And let's hear it for Java!
+<crickets chirp in the distance>
+
+languages.each do |lang| => λέμε " Το variable lang να δείχνει σε κάθε ένα αντικειμενο/object της array (αυτο γίνεται με τις δυο κάθετες γραμμες ||)"
+Οι κάθετες γραμμες σημαινουν οτι το lang ειναι το variable το οποίο θα χρησιμοποιήσει η μεθοδος each για να δειχνει σε κάθε object μεσα στην array.
+Οι καθθετες γραμμες δεν κάνουν κατι στο lang, απλά επιτρεπουν στο each να ξερει ποιο variable να χτησιμοποιήσει για να τροφοδοτησει κάθε object της array.
+
+
+Η each ειναι μια array method, και συμπεριφερεται όπως μια loop. Αλλα δεν ειναι loop ειναι array method.
+Οι array mathods που συμπεριφερονατι σαν loop καλούνται iterators.
+Κάθε iterator ακολουθειται απο ενα block κωδικα (εδω έχουμε το block κωδικα το οποίο οριζεται απο τα do και end)
+
+Υπαρχουν iterators οι οποίοι δεν είναι array methods
+πχ  
+3.times do
+  "Hip-Hop_Ηorray!"
+end
+
+Το παραπάνω θα δώσει   
+
+Hip-Hop_Ηorray!
+Hip-Hop_Ηorray!
+Hip-Hop_Ηorray!
+
+iterator ειναι το 3.times και είναι integer method
+
+
+Αλλες array methods 
+
+.to_s => μετατρεπει την array σε string
+
+παραδειγμα
+foods = ['artichoke', 'brioche', 'caramel']
+
+puts foods.to_s 
+θα δωσει 
+['artichoke', 'brioche', 'caramel']
+
+.join => μετατρεπει την array σε string aφαιρόντας τα κενα τα quotes και τις αγκυλες.
+
+με την join μπορουμε να προσθεσουμε χαρακτηρες
+
+παραδειγμα (αφαιρει κενα, quotes, αγκύλες)
+foods = ['artichoke', 'brioche', 'caramel']
+
+puts foods.join 
+θα δωσει 
+artichokebriochecaramel
+
+παραδειγμα (προσθέτη όποιους χαρακτηρες του πούμε)
+foods = ['artichoke', 'brioche', 'caramel']
+
+puts foods.join  (' , ')
+θα δωσει
+artichoke , brioche , caramel
+
+
+.push => προσθέτει ενα object στο τελος μιας array
+
+
+favorites = [] 
+favorites.push 'raindrops on roses' 
+favorites.push 'whiskey on kittens'
+ 
+puts favorites => θα δώσει 
+
+raindrops on roses
+whiskey on kittens 
+
+.pop => αφαιρει το τελευταίο object στην array και σου λεει ποιο είναι/ήταν.
+
+
+favorites = ['raindrops on roses' , 'whiskey on kittens' ] 
+
+favorites.pop
+
+puts favorites => θα δώσει 
+raindrops on roses
+
+
+.last => σου λεει ποιο ειναι το τελευταίο object στην array
+
+favorites = ['raindrops on roses' , 'whiskey on kittens' ] 
+
+favorites.last
+
+puts favorites => θα δώσει 
+whiskey on kittens
+
+
+.length => σου δειχνει ΄πόσα object υπαρχουν μεσα στην array.
+favorites = ['raindrops on roses' , 'whiskey on kittens' ] 
+
+puts favorites.length => θα δωσει 2
+
+
+
+.sort => δινει μια συντομη εκδοχη της array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
